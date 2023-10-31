@@ -26,11 +26,7 @@ Our dapp is ready and compatible with all devices and everything is on mainnet.
 
 # Introduction and Problem
 
-Solana stands out as the blockchain uniquely positioned to excel in the primary cryptocurrency use case, payments. 
-
-<img src="https://i0.wp.com/criptotendencia.com/wp-content/uploads/2023/08/Solana.jpg?fit=1043%2C575&ssl=1" width="400">
-
-However, to achieve widespread adoption, it must cater to everyday consumers, including major retailers and mom-and-pop shops.
+To achieve widespread adoption, blockchains must cater to everyday consumers, including major retailers and mom-and-pop shops.
 
 Our previous experiences have shown us that businesses face two main challenges:
 
