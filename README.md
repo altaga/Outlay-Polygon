@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [<img src="https://img.shields.io/badge/View-Video-red">](pending)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [<img src="https://img.shields.io/badge/View-Video-red">](https://www.youtube.com/watch?v=-uisq7wx1I8)
 
 # Outlay-Polygon
 
@@ -14,15 +14,7 @@ Our dapp is ready and compatible with all devices and everything is on mainnet.
 
 ## Main demo video: 
 
-[![Demo](https://i.ibb.co/g4W3ypx/image.png)](pending)
-
-## Pitch Deck: 
-
-### https://bit.ly/OutlaySlideDeck
-
-## Notion webpage:
-
-### https://bit.ly/OutlayNotion
+[![Demo](https://i.ibb.co/g4W3ypx/image.png)](https://www.youtube.com/watch?v=-uisq7wx1I8)
 
 # Introduction and Problem
 
