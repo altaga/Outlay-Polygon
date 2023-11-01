@@ -188,11 +188,11 @@ The important part of the implementation is to correctly "program" the AI so tha
 
 ### Alchemy Account Abstraction SDK:
 
-Este modulo permite al business crear una Light Wallet, la cual es un tipo de Account Abstraction wallet creada por Alchemy y con la cual el negocio podra recibir y utilizar todos los servicios de Outlay pero con todos los beneficios de usar Smart Contract Wallet.
+This module allows the business to create a Light Wallet, which is a type of Account Abstraction wallet created by Alchemy and with which the business can receive and use all the services of Outlay but with all the benefits of using Smart Contract Wallet.
 
 <img src="https://i.ibb.co/y64KJHS/Screenshot-20231029-234215.png" width="32%"> <img src="https://i.ibb.co/9G00cN4/Screenshot-20231030-000029.png" width="32%"> <img src="https://i.ibb.co/bR1Fnjp/Screenshot-20231030-000004.png" width="32%"> 
 
-Gracias a Alchemy y a su LightAccountFactory Contract en la red de Polygon, tan solo con un clic podemos configurar nuestra Smart Contract Wallet en nuestro POS.
+Through Alchemy and its LightAccountFactory Contract on the Polygon network, with just one click we can configure our Smart Contract Wallet in our POS.
 
 <img src="https://i.ibb.co/bbr2MHp/vlcsnap-2023-10-30-00h13m08s023.png" width="32%"> <img src="https://i.ibb.co/WzwWJCr/vlcsnap-2023-10-30-00h13m20s646.png" width="32%">
 
@@ -200,11 +200,11 @@ The technical implementation of this code is in the following link:
 
 [CODE](./RN_APP/src/screens/AccountAbstraction/aa.js)
 
-El contrato ABI que se esta utilizando para la creacion de la wallet es:
+The ABI contract that is being used to create the wallet is:
 
 [FACTORY CONTRACT](./RN_APP/src/programs/contractsETH/LightAccountFactory.js)
 
-De este codigo es importante resaltar la siguiente seccion:
+From this code it is important to highlight the following section:
 
     const provider = new providers.JsonRpcProvider(rpc);
     const session = await this.getEncryptStorageValue('ethPrivate'); // YOUR BUNDLER ACCOUNT
@@ -230,11 +230,11 @@ De este codigo es importante resaltar la siguiente seccion:
     );
     receipt = await receipt.wait();
 
-Y el contrato con el que interaccionamos con la smart contract wallet una vez creada es el siguiente:
+And the contract with which we interact with the smart contract wallet once created is the following:
 
 [LIGHT CONTRACT](./RN_APP/src/programs/contractsETH/LightAccount.js)
 
-Una vez creada la wallet, podremos relizar cualquier operacion sobre la misma, ya sea interaccionar con un smart contract o simplemente disponer del dinero en la wallet.
+Once the wallet is created, we can carry out any operation on it, whether it is interacting with a smart contract or simply having the money in the wallet.
 
     const provider = new providers.JsonRpcProvider(this.state.network.rpc);
     const session = await this.getEncryptStorageValue('ethPrivate');    // YOUR BUNDLER ACCOUNT
@@ -265,11 +265,11 @@ Una vez creada la wallet, podremos relizar cualquier operacion sobre la misma, y
 
 ### Programmable Wallets Circle:
 
-Este modulo permite al business crear una Programmable Wallet, la cual es un tipo de Wallet creada por Circle y sus servicios Web3 Services, con este modulo el negocio podra recibir y utilizar todos los servicios de Outlay pero con toda la seguridad de Circle, sin necesidad nunca de preocuparse por sus private keys.
+This module allows the business to create a Programmable Wallet, which is a type of Wallet created by Circle and its Web3 Services, with this module the business will be able to receive and use all the services of Outlay but with all the security of Circle, without the need Never worry about your private keys.
 
 <img src="https://i.ibb.co/58mHrGz/Screenshot-20231030-000129.png" width="32%"> <img src="https://i.ibb.co/d6Mr9Y1/Screenshot-20231030-000134.png" width="32%"> <img src="https://i.ibb.co/Fh5LryN/Screenshot-20231030-000839.png" width="32%"> 
 
-Todas las wallets que creen los clientes estan protegidas completamente en la cloud de Circle, ademas de ser posible verificar todas las transaccions y balances de las mismas desde la interfaz de developer.
+All wallets created by clients are completely protected in the Circle cloud, and it is also possible to verify all transactions and balances from the developer interface.
 
 <img src="https://i.ibb.co/rscjLpp/vlcsnap-2023-10-30-00h24m17s561.png"> 
 
@@ -277,7 +277,7 @@ The technical implementation of this code is in the following link:
 
 [CODE](./RN_APP/src/screens/ProgramableWallet/cpw.js)
 
-De este codigo es importante resaltar la siguiente seccion:
+From this code it is important to highlight the following section:
 
     const entitySecretCiphertext = await new Promise(resolve =>
       fetch('https://YOURAPI/getEntitySecretCipherText', {
@@ -314,13 +314,13 @@ De este codigo es importante resaltar la siguiente seccion:
         .catch(() => resolve(null));
     });
 
-El esquema de como se realiza la creacion de una wallet es el siguiente almenos del lado del app, el esquema completo de creacion de la wallet esta en la documentacion oficial de Circle.
+The way on to create a wallet is as follows, at least on the app side, the complete scheme for creating the wallet is in the official Circle documentation.
 
 <img src="https://i.ibb.co/RTtf6gn/image.png"> 
 
 https://developers.circle.com/w3s/docs/developer-controlled-create-your-first-wallet
 
-En este caso el tipo de wallet que estamos creando es una Developer controlled wallet y estan en Testnet. Los servicios de circle y Outlay seguiremos mejorando progrsivamente hasta tener User controlled Wallets y Mainnet disponibles para todos nuestros usuarios.
+In this case the type of wallet we are creating is a Developer controlled wallet and they are on Testnet. We will continue to progressively improve the circle and Outlay services until we have User controlled Wallets and Mainnet available for all our users.
 
 ### Direct Deposit:
 
@@ -328,7 +328,7 @@ This module is activated by default since it allows you to display, print (if yo
 
 <img src="https://i.ibb.co/k8wZ3J6/Screenshot-20231013-203305.png" width="32%"> <img src="https://i.ibb.co/Kq3hvHM/Screenshot-20231013-203310.png" width="32%"> 
 
-Todas las cuentas de Account Abstraction (Alchemy SDK) y Programmable Wallets (Circle Web3 services) apareceran automaticamente despues de ser creadas para poder empezar a usarlas de inmediato.
+All Account Abstraction (Alchemy SDK) and Programmable Wallets (Circle Web3 services) accounts will appear automatically after being created so you can start using them immediately.
 
 <img src="https://i.ibb.co/88fmsG4/vlcsnap-2023-10-30-00h17m09s997.png" width="32%"> <img src="https://i.ibb.co/bbr2MHp/vlcsnap-2023-10-30-00h13m08s023.png" width="32%"> <img src="https://i.ibb.co/VLyP1VH/vlcsnap-2023-10-30-00h16m53s235.png" width="32%"> 
 
